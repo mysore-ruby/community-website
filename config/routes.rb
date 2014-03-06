@@ -1,4 +1,5 @@
 CommunityWebsite::Application.routes.draw do
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +54,8 @@ CommunityWebsite::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  # towards the end of routes.rb
+get "/:pge" => "pages#show"
+root :to => "pages#show"
+
 end
