@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="description">
+  <meta content="" name="author">
+  <link href="../../assets/ico/favicon.png" rel="shortcut icon">
+  <title>Index Page</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.css" />
+  <link rel="stylesheet" href="assets/css/override-bootstrap.css" />
+  <link rel="stylesheet" href="assets/css/override-bootstrap-responsive.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>CommunityWebsite</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <% if user_signed_in? %>
+  Signed in as <%= current_user.email %>. Not you?
+  <%= link_to "Sign out", destroy_user_session_path,:method => :delete %>
+  <% end %>
+  <%= yield %>
+  <img src="/assets/sign_in_fb.png" alt="facebook icon" />
+
+</body>
+</html>

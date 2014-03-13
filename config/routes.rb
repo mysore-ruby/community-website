@@ -57,6 +57,5 @@ devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks"
   #     resources :products
   #   end
   # towards the end of routes.rb
-get "/:pge" => "pages#show"
-root :to => "pages#show"
+
 end
