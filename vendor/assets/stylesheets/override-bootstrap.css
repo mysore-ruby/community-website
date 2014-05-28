@@ -1,0 +1,18 @@
+body {
+    color: #858585;
+}
+.navbar-default {
+    background-color: #c1392b;
+    border-color: #c1392b;
+}
+.navbar {
+    border-radius: 0px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.navbar-nav > li > a {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}

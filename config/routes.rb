@@ -1,7 +1,16 @@
 CommunityWebsite::Application.routes.draw do
+
+  get "sessions/create"
+  get "pages/index"
+  get "/:pge" => "pages#show"
+  root :to => "pages#show"
+  resources :sessions
+
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

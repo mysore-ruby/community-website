@@ -14,3 +14,17 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function(){
+	$("a#invite_fb_friends").click(function(){
+		FB.init({
+			appId: '1489700394593754',
+			status: true,
+			cookie: false,
+		});
+
+		FB.ui({
+			method: 'apprequests',
+			message: '<%=current_user.name %> has invite you to a party for <%=get_current_board.bp_name%>'});
+	});
+});
