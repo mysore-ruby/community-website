@@ -20,3 +20,14 @@ test:
   username: mrug_user
   host: password
   port: 5432
+
+it:
+  adapter: postgresql
+  encoding: unicode
+  reconnect: false
+  database: mrug_it
+  pool: 5
+  username: mrug
+  password: password
+  host: localhost
+  port: 5432
