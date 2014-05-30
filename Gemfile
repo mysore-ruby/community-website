@@ -25,7 +25,14 @@ gem 'omniauth-facebook'
 
 gem 'omniauth-google-oauth2'
 
+group :development do
+gem 'capistrano', '~> 3.2.1'
+gem 'capistrano-rails'
+gem 'capistrano-rbenv'
+end
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
