@@ -5,6 +5,8 @@ set :scm, :git
 
 set :format, :pretty
 
+set :bundle_flags,    ""
+
 set :default_env, { :path => "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
 set :rbenv_type, :user # or :system, depends on your rbenv setup
 set :rbenv_ruby, '2.0.0-p247'
@@ -26,20 +28,20 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 
 set :keep_releases, 5
 
-before 'deploy:updated', 'deploy:copy_database_yml'
+# before 'deploy:updated', 'deploy:copy_database_yml'
 
-namespace :deploy do
+ namespace :deploy do
 
-  desc "Copy database.yml.example"
-  task :copy_database_yml do
-    on roles(:app) do
-      execute "mkdir -p #{shared_path}/config"
-      execute "cp -f #{release_path}/config/database.yml.example #{shared_path}/config/database.yml"
-      execute "rm -f #{release_path}/config/database.yml"
-      execute "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
-      execute "rm -f #{release_path}/config/database.yml.example"
-    end
-  end
+#   desc "Copy database.yml.example"
+#   task :copy_database_yml do
+#     on roles(:app) do
+#       execute "mkdir -p #{shared_path}/config"
+#       execute "cp -f #{release_path}/config/database.yml.example #{shared_path}/config/database.yml"
+#       execute "rm -f #{release_path}/config/database.yml"
+#       execute "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+#       execute "rm -f #{release_path}/config/database.yml.example"
+#     end
+#   end
 
   desc 'Restart application'
   task :restart do

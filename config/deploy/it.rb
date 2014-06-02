@@ -1,6 +1,6 @@
 set :stage, :it
 set :rails_env, 'it'
-set :branch, :master
+set :branch, :capistrano_config
 set :deploy_to, '/u01/apps/qwinix/mrug_it'
 set :log_level, :debug
 

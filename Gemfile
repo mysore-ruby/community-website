@@ -25,6 +25,8 @@ gem 'omniauth-facebook'
 
 gem 'omniauth-google-oauth2'
 
+gem 'therubyracer', :platforms => :ruby
+
 group :development do
 gem 'capistrano', '~> 3.2.1'
 gem 'capistrano-rails'
