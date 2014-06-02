@@ -36,10 +36,10 @@ set :keep_releases, 5
   task :copy_database_yml do
     on roles(:app) do
       execute "mkdir -p #{shared_path}/config"
-      execute "cp -f #{release_path}/config/database.yml.example #{shared_path}/config/database.yml"
+      execute "cp -f #{release_path}/config/database.example.yml #{shared_path}/config/database.yml"
       execute "rm -f #{release_path}/config/database.yml"
       execute "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
-      execute "rm -f #{release_path}/config/database.yml.example"
+      execute "rm -f #{release_path}/config/database.example.yml"
     end
   end
 
