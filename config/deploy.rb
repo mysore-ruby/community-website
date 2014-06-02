@@ -32,7 +32,7 @@ set :keep_releases, 5
 
  namespace :deploy do
 
-  desc "Copy database.yml.example"
+  desc "Copy database.example.yml"
   task :copy_database_yml do
     on roles(:app) do
       execute "mkdir -p #{shared_path}/config"
