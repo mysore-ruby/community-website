@@ -1,4 +1,4 @@
- it:
+it:
   adapter: postgresql
   encoding: unicode
   reconnect: false
