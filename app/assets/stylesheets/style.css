@@ -1,0 +1,130 @@
+.social-head {
+    background-color: #c1392b;
+}
+.social-head-padding {
+    padding: 40px 0px;
+    text-align: right;
+}
+.logo-caption {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.social-icon-margin {
+    margin-bottom: 30px;
+}
+.image-list {
+    width: 60px;
+    height: 60px;
+    padding: 2px;
+    float: left;
+}
+img.grayscale {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+, IE10 */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+    -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+}
+
+img.grayscale:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
+[class^="icons-"],
+[class*=" icons-"] {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-top: 1px;
+    *margin-right: .3em;
+    line-height: 14px;
+    vertical-align: text-top;
+    background-image: url("social_media_sprite.jpg");
+    background-position: 14px 14px;
+    background-repeat: no-repeat;
+}
+
+/* White icons with optional class, or on hover/active states of certain elements */
+
+.icon-sprite,
+.nav > .active > a > [class^="icons-"],
+.nav > .active > a > [class*=" icons-"],
+.dropdown-menu > li > a:hover > [class^="icons-"],
+.dropdown-menu > li > a:hover > [class*=" icons-"],
+.dropdown-menu > .active > a > [class^="icons-"],
+.dropdown-menu > .active > a > [class*=" icons-"] {
+    background-image: url("social_media_sprite.jpg");
+}
+
+.icons-twitter {
+    background-position: -2px  -43px;
+}
+.icons-twitter:hover {
+    background-position: -2px  -3px;
+}
+.icons-facebook {
+    background-position: -46px  -43px;
+}
+.icons-facebook:hover {
+    background-position: -46px  -3px;
+}
+.icons-print {
+    background-position: -91px  -43px;
+}
+.icons-print:hover {
+    background-position: -91px  -3px;
+}
+.icons-gplus {
+    background-position: -135px  -43px;
+}
+.icons-gplus:hover {
+    background-position: -135px  -3px;
+}
+.icons-in {
+    background-position: -179px  -43px;
+}
+.icons-in:hover {
+    background-position: -179px  -3px;
+}
+.icons-tube {
+    background-position: -222px  -43px;
+}
+.icons-tube:hover {
+    background-position: -222px  -3px;
+}
+.text-align-justify {
+    text-align: justify;
+}
+.row-padding {
+    padding: 50px 0px 30px 0px;
+}
+.heding-color {
+    color: #262626;
+}
+.row-bg-color {
+    background-color: #e3e3e3;
+}
+.coute-text {
+    padding: 20px;
+    font-style: italic;
+}
+.say-hi {
+    font-size: 20px;
+    color: #262626;
+    text-align: center;
+}
+.say-caption {
+    text-align: center;
+    margin: 20px 0px 40px 0px;
+}
+#footer {
+    background-color: #e3e3e3;  
+    padding: 20px;
+}
+#footer .anchor {
+    padding: 20px;
+    text-transform: uppercase;
+    color: #848484;
+}

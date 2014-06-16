@@ -1,10 +1,10 @@
-development:
+evelopment:
   adapter: postgresql
   encoding: unicode
   reconnect: false
   database: mrug_development
   pool: 5
-  username: username
+  username: mrug_user
   host: password
   port: 5432
 
@@ -17,6 +17,6 @@ test:
   reconnect: false
   database: mrug_test
   pool: 5
-  username: username
+  username: mrug_user
   host: password
   port: 5432

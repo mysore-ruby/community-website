@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CommunityWebsite</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+	<title>CommunityWebsite</title>
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
 </head>
+
+<div id="user_nav">
+	<% if current_user %>
+	<%= link_to "Sign out", session_path(current_user.id), method: :delete, id: "sign_out" %>
+	<% else %>
+	<%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+	<% end %>
+</div>
+
 <body>
-
-<%= yield %>
-
+	<%= yield %>
 </body>
 </html>
